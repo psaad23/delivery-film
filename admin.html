@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>DELIVERY — Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#131110;--ink-deep:#0B0A09;--orange:#E8963C;--cream:#F2E9D8;--cream-dim:#C9BFAC;--grey:#3A3733}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--cream-dim);font-family:'Archivo',sans-serif;font-size:15px;line-height:1.5;padding-bottom:120px}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header{padding:34px 0 20px;border-bottom:1px solid var(--grey);margin-bottom:30px}
+h1{font-family:'Anton',sans-serif;color:var(--cream);letter-spacing:.15em;font-size:28px}
+h1 span{color:var(--orange)}
+.sub{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.3em;font-size:11px;color:var(--orange);margin-top:6px}
+fieldset{border:1px solid var(--grey);padding:22px;margin-bottom:24px;background:var(--ink-deep)}
+legend{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.25em;font-size:12px;color:var(--orange);padding:0 10px}
+label{display:block;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.15em;font-size:11px;color:var(--cream-dim);margin:16px 0 6px}
+input[type=text],input[type=password],textarea{width:100%;background:var(--ink);border:1px solid var(--grey);color:var(--cream);padding:10px 12px;font-family:'Archivo',sans-serif;font-size:14px}
+input:focus,textarea:focus{outline:none;border-color:var(--orange)}
+textarea{min-height:74px;resize:vertical}
+.hint{font-size:12px;color:var(--grey);margin-top:4px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.row{grid-template-columns:1fr}}
+.member,.fact,.roleitem{border:1px dashed var(--grey);padding:14px;margin-top:14px;position:relative}
+button{cursor:pointer;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:12px;border:none;padding:10px 18px}
+.btn-add{background:transparent;border:1px solid var(--orange);color:var(--orange);margin-top:12px}
+.btn-del{background:transparent;border:1px solid var(--grey);color:var(--grey);position:absolute;top:8px;right:8px;padding:4px 10px;font-size:10px}
+.btn-del:hover{border-color:#c0392b;color:#c0392b}
+.pubbar{position:fixed;bottom:0;left:0;right:0;background:var(--orange);padding:14px 0;z-index:20}
+.pubbar .wrap{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.pubbar .status{color:var(--ink);font-weight:600;font-size:13px}
+.btn-pub{background:var(--ink);color:var(--orange);font-size:14px;padding:14px 34px}
+.btn-pub:disabled{opacity:.5;cursor:wait}
+.tokbox{background:#241d12;border:1px solid var(--orange);padding:18px;margin-bottom:26px}
+.tokbox h2{font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:.15em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+.tokbox ol{margin:10px 0 14px 18px;font-size:13px}
+.tokbox li{margin-bottom:4px}
+.tokbox a{color:var(--orange)}
+.tokrow{display:flex;gap:10px}
+.tokrow input{flex:1}
+.btn-tok{background:var(--orange);color:var(--ink)}
+.md-help{font-size:12px;color:var(--grey);border:1px solid var(--grey);padding:10px 14px;margin-bottom:22px}
+.md-help code{color:var(--orange)}
+.ok{color:#1d6b34}
+</style>
+</head>
+<body>
+<div id="gate" style="position:fixed;inset:0;background:var(--ink);z-index:100;display:flex;align-items:center;justify-content:center">
+  <div style="width:min(420px,90vw)">
+    <h1 style="font-family:'Anton',sans-serif;color:var(--cream);letter-spacing:.15em;font-size:26px;margin-bottom:4px">DELIVER<span style="color:var(--orange)">Y</span></h1>
+    <div class="sub" style="font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.3em;font-size:11px;color:var(--orange);margin-bottom:22px">Zone admin — accès restreint</div>
+    <label for="gatepw">Mot de passe</label>
+    <div class="tokrow" style="display:flex;gap:10px">
+      <input type="password" id="gatepw" style="flex:1" autocomplete="current-password">
+      <button class="btn-tok" style="background:var(--orange);color:var(--ink)" onclick="tryGate()">Entrer</button>
+    </div>
+    <div class="hint" id="gatemsg" style="margin-top:8px"></div>
+  </div>
+</div>
+<header><div class="wrap">
+  <h1>DELIVER<span>Y</span> — ADMIN</h1>
+  <div class="sub">Modifier le contenu du site · publication directe sur GitHub</div>
+</div></header>
+
+<div class="wrap">
+  <div class="tokbox" id="tokbox">
+    <h2>Connexion GitHub (une seule fois)</h2>
+    <div id="tokstate"></div>
+    <ol>
+      <li>Va sur <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com → Fine-grained tokens → Generate new token</a></li>
+      <li>Nom : <code>delivery-admin</code> · Expiration : 1 an · Repository access : <b>Only select repositories → delivery-film</b></li>
+      <li>Permissions → Repository permissions → <b>Contents : Read and write</b> → Generate</li>
+      <li>Copie le token (commence par <code>github_pat_</code>) et colle-le ici :</li>
+    </ol>
+    <div class="tokrow">
+      <input type="password" id="token" placeholder="github_pat_...">
+      <button class="btn-tok" onclick="saveToken()">Enregistrer</button>
+    </div>
+    <div class="hint">Le token reste uniquement dans TON navigateur (localStorage). Ne le partage jamais.</div>
+  </div>
+
+  <div class="md-help">
+    Mise en forme dans les champs : <code>*mots*</code> = italique (ou orange dans la citation) · <code>**mots**</code> = gras · Retour de ligne = nouvelle ligne à l'écran.
+  </div>
+
+  <div id="form">Chargement du contenu…</div>
+</div>
+
+<div class="pubbar"><div class="wrap">
+  <div class="status" id="status">Modifie les champs puis clique Publier — le site se met à jour en ~1 minute.</div>
+  <button class="btn-pub" id="pub" onclick="publish()">Publier sur le site</button>
+</div></div>
+
+<script>
+/* ---- password gate (SHA-256 hash; the password itself is never in this file) ---- */
+const GATE_HASH='136c9e87453339b304bae8106461f51b18422c7eba06934b573c004289571327';
+async function sha256(s){
+  const b=await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+  return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');
+}
+async function tryGate(){
+  const pw=document.getElementById('gatepw').value;
+  if(await sha256(pw)===GATE_HASH){
+    sessionStorage.setItem('gate_ok','1');
+    document.getElementById('gate').style.display='none';
+  }else{
+    document.getElementById('gatemsg').textContent='Mot de passe incorrect.';
+  }
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  if(sessionStorage.getItem('gate_ok')==='1') document.getElementById('gate').style.display='none';
+  document.getElementById('gatepw').addEventListener('keydown',e=>{if(e.key==='Enter')tryGate();});
+});
+
+const REPO='psaad23/delivery-film', FILE='content.json', BRANCH='main';
+const API='https://api.github.com/repos/'+REPO+'/contents/'+FILE;
+let content=null, sha=null;
+
+function tok(){ return localStorage.getItem('gh_token')||''; }
+function saveToken(){
+  const t=document.getElementById('token').value.trim();
+  if(!t){ alert('Colle le token d\'abord.'); return; }
+  localStorage.setItem('gh_token', t);
+  document.getElementById('token').value='';
+  renderTokState();
+}
+function clearToken(){ localStorage.removeItem('gh_token'); renderTokState(); }
+function renderTokState(){
+  const s=document.getElementById('tokstate');
+  s.innerHTML = tok()
+    ? '<p class="ok">✓ Token enregistré dans ce navigateur. <a href="#" onclick="clearToken();return false;">Retirer</a></p>'
+    : '<p>Aucun token enregistré — suis les étapes ci-dessous.</p>';
+}
+
+async function load(){
+  renderTokState();
+  try{
+    if(tok()){
+      const r=await fetch(API+'?ref='+BRANCH,{headers:{Authorization:'Bearer '+tok(),Accept:'application/vnd.github+json'}});
+      if(!r.ok) throw new Error('API '+r.status);
+      const j=await r.json();
+      sha=j.sha;
+      content=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(j.content.replace(/\n/g,'')),c=>c.charCodeAt(0))));
+    }else{
+      content=await (await fetch(FILE+'?v='+Date.now())).json();
+    }
+    buildForm();
+  }catch(e){
+    document.getElementById('form').innerHTML='<p>Erreur de chargement : '+e.message+'</p>';
+  }
+}
+
+function fld(id,label,val,multi,hint){
+  return '<label for="'+id+'">'+label+'</label>'+
+    (multi?'<textarea id="'+id+'">'+esc(val)+'</textarea>':'<input type="text" id="'+id+'" value="'+esc(val)+'">')+
+    (hint?'<div class="hint">'+hint+'</div>':'');
+}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');}
+
+function buildForm(){
+  const c=content;
+  let h='';
+  h+='<fieldset><legend>Héro</legend>'+
+     fld('hero_kicker','Surtitre',c.hero.kicker)+
+     fld('hero_title','Titre',c.hero.title)+
+     fld('hero_logline','Logline',c.hero.logline,true)+'</fieldset>';
+  h+='<fieldset><legend>Le film</legend>'+
+     fld('film_label','Étiquette',c.film.label)+
+     fld('film_heading','Titre de section',c.film.heading,true)+
+     fld('film_p1','Paragraphe 1',c.film.p1,true)+
+     fld('film_p2','Paragraphe 2',c.film.p2,true)+
+     fld('film_p3','Paragraphe 3',c.film.p3,true)+'</fieldset>';
+  h+='<fieldset><legend>Fiche technique</legend><div id="facts">'+
+     c.facts.map((f,i)=>'<div class="fact"><button class="btn-del" onclick="delFact('+i+')">retirer</button><div class="row">'+
+       fld('fact_k_'+i,'Libellé',f.k)+fld('fact_v_'+i,'Valeur',f.v)+'</div></div>').join('')+
+     '</div><button class="btn-add" onclick="addFact()">+ Ajouter une ligne</button></fieldset>';
+  h+='<fieldset><legend>Le ton</legend>'+
+     fld('tone_label','Étiquette',c.tone.label)+
+     fld('tone_quote','Citation (retours de ligne = lignes, *mots* = orange)',c.tone.quote,true)+
+     fld('tone_text','Texte',c.tone.text,true)+'</fieldset>';
+  h+='<fieldset><legend>Équipe</legend>'+
+     fld('team_label','Étiquette',c.team.label)+
+     fld('team_heading','Titre',c.team.heading)+
+     fld('team_intro','Intro',c.team.intro,true)+
+     '<div id="members">'+c.team.members.map((m,i)=>'<div class="member"><button class="btn-del" onclick="delMember('+i+')">retirer</button>'+
+       '<div class="row">'+fld('m_name_'+i,'Nom',m.name)+fld('m_role_'+i,'Rôle',m.role)+'</div>'+
+       fld('m_bio_'+i,'Bio',m.bio,true)+fld('m_link_'+i,'Lien portfolio',m.link)+'</div>').join('')+
+     '</div><button class="btn-add" onclick="addMember()">+ Ajouter un membre</button></fieldset>';
+  h+='<fieldset><legend>Crew call</legend>'+
+     fld('crew_label','Étiquette',c.crew.label)+
+     fld('crew_heading','Titre',c.crew.heading)+
+     '<div id="roles">'+c.crew.roles.map((r,i)=>'<div class="roleitem"><button class="btn-del" onclick="delRole('+i+')">retirer</button>'+
+       fld('role_'+i,'Poste recherché '+(i+1),r)+'</div>').join('')+
+     '</div><button class="btn-add" onclick="addRole()">+ Ajouter un poste</button>'+
+     fld('crew_fr','Ligne française',c.crew.fr,true)+
+     fld('crew_pitch','Pitch',c.crew.pitch,true)+
+     fld('crew_slogan','Slogan',c.crew.slogan)+
+     '<div class="row">'+fld('crew_cta','Texte du bouton',c.crew.cta_text)+fld('crew_email','Courriel de contact',c.crew.cta_email)+'</div></fieldset>';
+  h+='<fieldset><legend>Pied de page</legend>'+
+     fld('footer_text','Texte',c.footer.text,true)+
+     fld('footer_fine','Petite ligne',c.footer.fine)+'</fieldset>';
+  document.getElementById('form').innerHTML=h;
+}
+
+function v(id){const el=document.getElementById(id);return el?el.value:'';}
+function harvest(){
+  const c=content;
+  c.hero={kicker:v('hero_kicker'),title:v('hero_title'),logline:v('hero_logline')};
+  c.film={label:v('film_label'),heading:v('film_heading'),p1:v('film_p1'),p2:v('film_p2'),p3:v('film_p3')};
+  c.facts=[...document.querySelectorAll('#facts .fact')].map((el,i)=>({k:v('fact_k_'+i),v:v('fact_v_'+i)}));
+  c.tone={label:v('tone_label'),quote:v('tone_quote'),text:v('tone_text')};
+  c.team={label:v('team_label'),heading:v('team_heading'),intro:v('team_intro'),
+    members:[...document.querySelectorAll('#members .member')].map((el,i)=>({name:v('m_name_'+i),role:v('m_role_'+i),bio:v('m_bio_'+i),link:v('m_link_'+i)}))};
+  c.crew={label:v('crew_label'),heading:v('crew_heading'),
+    roles:[...document.querySelectorAll('#roles .roleitem')].map((el,i)=>v('role_'+i)),
+    fr:v('crew_fr'),pitch:v('crew_pitch'),slogan:v('crew_slogan'),cta_text:v('crew_cta'),cta_email:v('crew_email')};
+  c.footer={text:v('footer_text'),fine:v('footer_fine')};
+  return c;
+}
+function addFact(){harvest();content.facts.push({k:'Libellé',v:'Valeur'});buildForm();}
+function delFact(i){harvest();content.facts.splice(i,1);buildForm();}
+function addMember(){harvest();content.team.members.push({name:'Nom',role:'Rôle',bio:'',link:'https://'});buildForm();}
+function delMember(i){harvest();content.team.members.splice(i,1);buildForm();}
+function addRole(){harvest();content.crew.roles.push('Nouveau poste');buildForm();}
+function delRole(i){harvest();content.crew.roles.splice(i,1);buildForm();}
+
+async function publish(){
+  if(!tok()){ alert('Enregistre ton token GitHub d\'abord (encadré en haut).'); return; }
+  const btn=document.getElementById('pub'), st=document.getElementById('status');
+  btn.disabled=true; st.textContent='Publication en cours…';
+  try{
+    harvest();
+    const cur=await fetch(API+'?ref='+BRANCH,{headers:{Authorization:'Bearer '+tok(),Accept:'application/vnd.github+json'}});
+    if(cur.ok){ sha=(await cur.json()).sha; }
+    const body={message:'Update site content via admin',branch:BRANCH,
+      content:btoa(String.fromCharCode(...new TextEncoder().encode(JSON.stringify(content,null,2)))),
+      ...(sha?{sha}:{})};
+    const r=await fetch(API,{method:'PUT',headers:{Authorization:'Bearer '+tok(),Accept:'application/vnd.github+json'},body:JSON.stringify(body)});
+    if(!r.ok){ const j=await r.json().catch(()=>({})); throw new Error(r.status+' '+(j.message||'')); }
+    sha=(await r.json()).content.sha;
+    st.textContent='✓ Publié! Le site se met à jour d\'ici ~1 minute (rafraîchis la page du site).';
+  }catch(e){
+    st.textContent='Erreur : '+e.message+' — vérifie le token (Contents: Read and write, repo delivery-film).';
+  }
+  btn.disabled=false;
+}
+load();
+</script>
+</body>
+</html>
