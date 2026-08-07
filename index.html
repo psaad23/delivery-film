@@ -222,6 +222,15 @@ footer .fine{font-family:var(--label);font-size:11px;letter-spacing:.2em;text-tr
   }
   function set(sel, html){ var el=document.querySelector(sel); if(el&&html!=null) el.innerHTML=html; }
   fetch('content.json?v='+Date.now()).then(function(r){return r.json();}).then(function(c){
+    if(c.theme){ var rs=document.documentElement.style;
+      if(c.theme.accent)rs.setProperty('--orange',c.theme.accent);
+      if(c.theme.ink){rs.setProperty('--ink',c.theme.ink);rs.setProperty('--ink-deep',c.theme.ink);}
+      if(c.theme.cream)rs.setProperty('--cream',c.theme.cream);
+    }
+    if(c.media){ var si=function(sel,u){var e=document.querySelector(sel); if(e&&u)e.src=u;};
+      si('.ride-near',c.media.ride_near); si('.ride-mid',c.media.ride_mid); si('.ride-far',c.media.ride_far);
+      si('.door-shut',c.media.door_shut); si('.door-ajar',c.media.door_ajar); si('.door-open',c.media.door_open);
+    }
     set('header .label', md(c.hero.kicker));
     set('header h1', md(c.hero.title));
     set('.logline', md(c.hero.logline));
