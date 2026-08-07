@@ -86,6 +86,11 @@ button{cursor:pointer;font-family:'Oswald',sans-serif;text-transform:uppercase;l
     Mise en forme dans les champs : <code>*mots*</code> = italique (ou orange dans la citation) · <code>**mots**</code> = gras · Retour de ligne = nouvelle ligne à l'écran.
   </div>
 
+  <div class="langbar" style="display:flex;gap:10px;margin-bottom:22px">
+    <button id="lang_en" class="btn-tok" onclick="switchLang('en')">Contenu EN (index)</button>
+    <button id="lang_fr" class="btn-add" onclick="switchLang('fr')">Contenu FR (fr.html)</button>
+  </div>
+
   <div id="form">Chargement du contenu…</div>
 </div>
 
@@ -115,9 +120,21 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('gatepw').addEventListener('keydown',e=>{if(e.key==='Enter')tryGate();});
 });
 
-const REPO='psaad23/delivery-film', FILE='content.json', BRANCH='main';
-const API='https://api.github.com/repos/'+REPO+'/contents/'+FILE;
+const REPO='psaad23/delivery-film', BRANCH='main';
+const FILES={en:'content.json', fr:'content-fr.json'};
+let LANG='en';
+function FILE(){ return FILES[LANG]; }
+function API(){ return 'https://api.github.com/repos/'+REPO+'/contents/'+FILE(); }
 let content=null, sha=null;
+
+function switchLang(l){
+  if(l===LANG) return;
+  LANG=l; sha=null; content=null;
+  document.getElementById('lang_en').className = l==='en' ? 'btn-tok' : 'btn-add';
+  document.getElementById('lang_fr').className = l==='fr' ? 'btn-tok' : 'btn-add';
+  document.getElementById('form').textContent='Chargement du contenu '+l.toUpperCase()+'…';
+  load();
+}
 
 function tok(){ return localStorage.getItem('gh_token')||''; }
 function saveToken(){
@@ -139,13 +156,13 @@ async function load(){
   renderTokState();
   try{
     if(tok()){
-      const r=await fetch(API+'?ref='+BRANCH,{headers:{Authorization:'Bearer '+tok(),Accept:'application/vnd.github+json'}});
+      const r=await fetch(API()+'?ref='+BRANCH,{headers:{Authorization:'Bearer '+tok(),Accept:'application/vnd.github+json'}});
       if(!r.ok) throw new Error('API '+r.status);
       const j=await r.json();
       sha=j.sha;
       content=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(j.content.replace(/\n/g,'')),c=>c.charCodeAt(0))));
     }else{
-      content=await (await fetch(FILE+'?v='+Date.now())).json();
+      content=await (await fetch(FILE()+'?v='+Date.now())).json();
     }
     buildForm();
   }catch(e){
@@ -233,12 +250,12 @@ async function publish(){
   btn.disabled=true; st.textContent='Publication en cours…';
   try{
     harvest();
-    const cur=await fetch(API+'?ref='+BRANCH,{headers:{Authorization:'Bearer '+tok(),Accept:'application/vnd.github+json'}});
+    const cur=await fetch(API()+'?ref='+BRANCH,{headers:{Authorization:'Bearer '+tok(),Accept:'application/vnd.github+json'}});
     if(cur.ok){ sha=(await cur.json()).sha; }
-    const body={message:'Update site content via admin',branch:BRANCH,
+    const body={message:'Update site content ('+LANG.toUpperCase()+') via admin',branch:BRANCH,
       content:btoa(String.fromCharCode(...new TextEncoder().encode(JSON.stringify(content,null,2)))),
       ...(sha?{sha}:{})};
-    const r=await fetch(API,{method:'PUT',headers:{Authorization:'Bearer '+tok(),Accept:'application/vnd.github+json'},body:JSON.stringify(body)});
+    const r=await fetch(API(),{method:'PUT',headers:{Authorization:'Bearer '+tok(),Accept:'application/vnd.github+json'},body:JSON.stringify(body)});
     if(!r.ok){ const j=await r.json().catch(()=>({})); throw new Error(r.status+' '+(j.message||'')); }
     sha=(await r.json()).content.sha;
     st.textContent='✓ Publié! Le site se met à jour d\'ici ~1 minute (rafraîchis la page du site).';
