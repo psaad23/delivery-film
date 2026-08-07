@@ -219,6 +219,22 @@ function buildForm(){
   h+='<fieldset><legend>Pied de page</legend>'+
      fld('footer_text','Texte',c.footer.text,true)+
      fld('footer_fine','Petite ligne',c.footer.fine)+'</fieldset>';
+  if(LANG==='en'){
+    var t=c.theme||{accent:'#E8963C',ink:'#131110',cream:'#F2E9D8'};
+    var m=c.media||{};
+    h+='<fieldset><legend>Style — couleurs (partagé EN + FR)</legend>'+
+       '<div class="hint" style="margin-top:10px">Codes hex (ex. #E8963C). S\'applique aux deux langues. Note : les illustrations gardent leurs propres couleurs — pour un changement complet de palette, remplace aussi les visuels ci-dessous.</div>'+
+       '<div class="row">'+fld('th_accent','Couleur accent (orange actuel)',t.accent)+fld('th_ink','Fond (noir actuel)',t.ink)+'</div>'+
+       fld('th_cream','Texte display (crème actuel)',t.cream)+'</fieldset>';
+    h+='<fieldset><legend>Visuels & animations (partagé EN + FR)</legend>'+
+       '<div class="hint" style="margin-top:10px">Colle des URL d\'images pour remplacer les visuels. Animation du livreur : 3 étapes (proche → mi-distance → loin), format large 21:9. Animation de la porte : 3 étapes (fermée → entrouverte → ouverte), format vertical 4:5. Pour une animation complètement différente, garde la logique 3 étapes : étape 1 affichée en entrant, étape 2 au centre de l\'écran, étape 3 en sortant.</div>'+
+       fld('md_ride_near','Livreur — étape 1 (proche)',m.ride_near||'',true)+
+       fld('md_ride_mid','Livreur — étape 2 (mi-distance)',m.ride_mid||'',true)+
+       fld('md_ride_far','Livreur — étape 3 (loin)',m.ride_far||'',true)+
+       fld('md_door_shut','Porte — étape 1 (fermée)',m.door_shut||'',true)+
+       fld('md_door_ajar','Porte — étape 2 (entrouverte)',m.door_ajar||'',true)+
+       fld('md_door_open','Porte — étape 3 (ouverte)',m.door_open||'',true)+'</fieldset>';
+  }
   document.getElementById('form').innerHTML=h;
 }
 
@@ -235,6 +251,11 @@ function harvest(){
     roles:[...document.querySelectorAll('#roles .roleitem')].map((el,i)=>v('role_'+i)),
     fr:v('crew_fr'),pitch:v('crew_pitch'),slogan:v('crew_slogan'),cta_text:v('crew_cta'),cta_email:v('crew_email')};
   c.footer={text:v('footer_text'),fine:v('footer_fine')};
+  if(LANG==='en' && document.getElementById('th_accent')){
+    c.theme={accent:v('th_accent'),ink:v('th_ink'),cream:v('th_cream')};
+    c.media={ride_near:v('md_ride_near').trim(),ride_mid:v('md_ride_mid').trim(),ride_far:v('md_ride_far').trim(),
+             door_shut:v('md_door_shut').trim(),door_ajar:v('md_door_ajar').trim(),door_open:v('md_door_open').trim()};
+  }
   return c;
 }
 function addFact(){harvest();content.facts.push({k:'Libellé',v:'Valeur'});buildForm();}
