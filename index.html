@@ -198,7 +198,7 @@ footer .fine{font-family:var(--label);font-size:11px;letter-spacing:.2em;text-tr
     <div class="fr">On cherche : 1er assistant réal · direction artistique / costumes · maquillage · dir. de production · assistant de production</div>
     <p class="pitch">We spend our careers enslaved to clients — this one's ours. A chance to be kids in a playground again. The kicker: it's pro-bono and self-financed, so the budget is laughable. Hell of a pitch, eh. What's actually on the table: a top-notch production and post crew, a designed festival short, full credit, finished material for your reel — and two night shoots over Labor Day weekend (Sept 4–6), locked around everyone's availability.</p>
     <div class="slogan">Do something creative, for once.</div>
-    <a class="cta" href="mailto:patrick@chapitre2.ca?subject=DELIVERY%20—%20Crew">Get in touch</a>
+    <a class="cta" href="mailto:info@patricksaad.ca?subject=DELIVERY%20—%20Crew">Get in touch</a>
   </div>
 </section>
 <footer>
@@ -210,6 +210,50 @@ footer .fine{font-family:var(--label);font-size:11px;letter-spacing:.2em;text-tr
     <p class="fine">Montréal · Short Film · 2026</p>
   </div>
 </footer>
+<script>
+(function(){
+  function md(s, orange){
+    s=String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    s=s.replace(/\n/g,'<br>');
+    s=s.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+    s=s.replace(/\*([^*]+)\*/g, orange?'<span>$1</span>':'<em>$1</em>');
+    return s;
+  }
+  function set(sel, html){ var el=document.querySelector(sel); if(el&&html!=null) el.innerHTML=html; }
+  fetch('content.json?v='+Date.now()).then(function(r){return r.json();}).then(function(c){
+    set('header .label', md(c.hero.kicker));
+    set('header h1', md(c.hero.title));
+    set('.logline', md(c.hero.logline));
+    set('#film .label', md(c.film.label));
+    set('#film h2', md(c.film.heading));
+    var ps=document.querySelectorAll('#film .film-grid > div:first-child p');
+    if(ps[0])ps[0].innerHTML=md(c.film.p1); if(ps[1])ps[1].innerHTML=md(c.film.p2); if(ps[2])ps[2].innerHTML=md(c.film.p3);
+    var dl=document.querySelector('.facts');
+    if(dl){ dl.innerHTML=c.facts.map(function(f){return '<div><dt>'+md(f.k)+'</dt><dd>'+md(f.v)+'</dd></div>';}).join(''); }
+    set('.door-grid .label', md(c.tone.label));
+    set('.big-quote', md(c.tone.quote, true));
+    set('.door-grid .txt p', md(c.tone.text));
+    set('#team .label', md(c.team.label));
+    set('#team h2', md(c.team.heading));
+    set('#team > .wrap > p', md(c.team.intro));
+    var tg=document.querySelector('.team-grid');
+    if(tg){ tg.innerHTML=c.team.members.map(function(m){
+      return '<div class="card"><div class="role">'+md(m.role)+'</div><h3>'+md(m.name)+'</h3><p>'+md(m.bio)+'</p><a href="'+encodeURI(m.link)+'" target="_blank" rel="noopener">Portfolio</a></div>';
+    }).join(''); }
+    set('#crew .label', md(c.crew.label));
+    set('#crew h2', md(c.crew.heading));
+    var roles=document.querySelector('.roles');
+    if(roles){ roles.innerHTML=c.crew.roles.map(function(r){return '<span>'+md(r)+'</span>';}).join(''); }
+    set('#crew .fr', md(c.crew.fr));
+    set('#crew .pitch', md(c.crew.pitch));
+    set('#crew .slogan', md(c.crew.slogan));
+    var cta=document.querySelector('#crew .cta');
+    if(cta){ cta.textContent=c.crew.cta_text; cta.href='mailto:'+c.crew.cta_email+'?subject=DELIVERY%20%E2%80%94%20Crew'; }
+    set('footer .wrap > div > p', md(c.footer.text));
+    set('footer .fine', md(c.footer.fine));
+  }).catch(function(){});
+})();
+</script>
 <script>
 (function(){
   if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
