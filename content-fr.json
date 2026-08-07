@@ -2,13 +2,13 @@
   "hero": {
     "kicker": "Montréal · Court métrage · En développement",
     "title": "DELIVERY",
-    "logline": "Août 2020. Confinement. Les chèques d'urgence sont épuisés, et les livreurs ne sont plus des travailleurs essentiels — *ce sont des esclaves jetables.* Un livreur reçoit une commande d'un restaurant suspect."
+    "logline": "Août 2020. Confinement. Les chèques d'urgence sont épuisés, et les livreurs ne sont plus des travailleurs essentiels : *ce sont des esclaves jetables.* Un livreur reçoit une commande d'un restaurant suspect."
   },
   "film": {
     "label": "Le film",
     "heading": "Une nuit.\nUne commande.",
-    "p1": "**DELIVERY, c'est la course d'une seule nuit à travers une ville sur pause** — racontée depuis la selle du seul travailleur que le confinement a oublié de protéger. Des rues vides, un canal silencieux, et une adresse dans un quartier cossu où aucun restaurant ne devrait exister.",
-    "p2": "Presque sans dialogue, porté par l'atmosphère et le son, le film revisite la pandémie à hauteur de rue : pas les manchettes, mais l'homme qui pédale entre elles — et ce qu'il est prêt à transporter pour nourrir sa famille.",
+    "p1": "**DELIVERY, c'est la course d'une seule nuit à travers une ville sur pause**, racontée depuis la selle du seul travailleur que le confinement a oublié de protéger. Des rues vides, un canal silencieux, et une adresse dans un quartier cossu où aucun restaurant ne devrait exister.",
+    "p2": "Presque sans dialogue, porté par l'atmosphère et le son, le film revisite la pandémie à hauteur de rue : pas les manchettes, mais l'homme qui pédale entre elles, et ce qu'il est prêt à transporter pour nourrir sa famille.",
     "p3": "Le court métrage est la première porte d'un univers plus vaste : un long métrage campé dans le même monde est en développement."
   },
   "facts": [
@@ -44,17 +44,17 @@
   "tone": {
     "label": "Le ton",
     "quote": "Dehors,\n*Drive*.\nDedans,\n*Uncut Gems*.",
-    "text": "La course est hypnotique — rues vides, lumière au sodium, une ville qui appartient à un seul cycliste. Puis une porte s'ouvre et le film change de vitesse : des voix qui se chevauchent, trop d'écrans, une transaction que personne ne nomme. Calme dehors. Fièvre dedans. Demandez-nous le scénario."
+    "text": "La course est hypnotique : rues vides, lumière au sodium, une ville qui appartient à un seul cycliste. Puis une porte s'ouvre et le film change de vitesse. Des voix qui se chevauchent, trop d'écrans, une transaction que personne ne nomme. Calme dehors. Fièvre dedans. Demandez-nous le scénario."
   },
   "team": {
     "label": "L'équipe",
     "heading": "Fait à Montréal",
-    "intro": "Une collaboration indépendante — pas de studio, pas de financement, pas de dettes. Une équipe de professionnels qui construit un court métrage de festival sur le métier et la bonne volonté.",
+    "intro": "Une collaboration indépendante. Pas de studio, pas de financement, pas de dettes. Une équipe de professionnels qui construit un court métrage de festival sur le métier et la bonne volonté.",
     "members": [
       {
         "role": "Scénariste · Réalisateur · Coproducteur",
         "name": "Kiril Shmidov",
-        "bio": "Cinéaste montréalais qui cherche à faire penser et ressentir, du canevas au celluloïd. Son travail traverse l'art visuel, la publicité et le cinéma.",
+        "bio": "Kiril Shmidov est un cinéaste et producteur primé qui cumule une décennie en publicité haut de gamme, réalisant des campagnes pour des marques mondiales comme Lancôme, Ford et GSK. Son esthétique repose sur la précision technique : une attention clinique à la friction entre la vérité objective et la construction du récit.",
         "link": "https://kirilshmidov.com/"
       },
       {
@@ -66,7 +66,7 @@
       {
         "role": "Directeur photo",
         "name": "Danik Bartolini",
-        "bio": "Directeur photo et réalisateur montréalais à la signature visuelle ancrée dans le récit. Son travail passe du cinéma — *Walter*, *Prospect* — à la publicité pour The North Face, Jordan et UFC.",
+        "bio": "Directeur photo et réalisateur montréalais à la signature visuelle ancrée dans le récit. Son travail passe du cinéma (*Walter*, *Prospect*) à la publicité pour The North Face, Jordan et UFC.",
         "link": "https://www.danikbartolini.com/"
       }
     ]
@@ -81,14 +81,14 @@
       "Directeur de production",
       "Assistant de production"
     ],
-    "fr": "Looking for: 1st AD · art direction / costumes · makeup · UPM · PA — English welcome",
-    "pitch": "On passe nos carrières asservis à des clients — celui-là est à nous. Une chance de redevenir des enfants dans une cour d'école. Le hic : c'est bénévole et autofinancé, alors le budget est risible. Tout un pitch, hein. Ce qui est vraiment sur la table : une équipe de production et de post-production de haut niveau, un court métrage de festival soigné, un crédit complet, du matériel fini pour ta bobine — et deux nuits de tournage la fin de semaine de la fête du Travail (4–6 sept.), calées sur les disponibilités de tout le monde.",
+    "fr": "Looking for: 1st AD · art direction / costumes · makeup · UPM · PA. English welcome",
+    "pitch": "On passe nos carrières asservis à des clients. Celui-là est à nous : une chance de redevenir des enfants dans une cour d'école. Le hic : c'est bénévole et autofinancé, alors le budget est risible. Tout un pitch, hein. Ce qui est vraiment sur la table : une équipe de production et de post-production de haut niveau, un court métrage de festival soigné, un crédit complet, du matériel fini pour ta bobine, plus deux nuits de tournage la fin de semaine de la fête du Travail (4–6 sept.), calées sur les disponibilités de tout le monde.",
     "slogan": "Fais quelque chose de créatif, pour une fois.",
     "cta_text": "Écris-nous",
     "cta_email": "info@patricksaad.ca"
   },
   "footer": {
-    "text": "Un court métrage indépendant. Tourné à Montréal.\n© 2026 — Tous droits réservés.",
+    "text": "Un court métrage indépendant. Tourné à Montréal.\n© 2026. Tous droits réservés.",
     "fine": "Montréal · Court métrage · 2026"
   }
 }
