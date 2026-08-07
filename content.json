@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "kicker": "Montréal · Short Film · In Development",
+    "title": "DELIVERY",
+    "logline": "August 2020. Pandemic lockdown. Stimulus checks have dried up, and food deliverers are no longer essential workers — *they're expendable slaves.* One deliverer gets an order from a suspicious restaurant."
+  },
+  "film": {
+    "label": "The Film",
+    "heading": "One night.\nOne order.",
+    "p1": "**DELIVERY is a single night's ride through a city on pause** — told from the saddle of the one worker the lockdown forgot to protect. Empty streets, a silent canal, and an address in a wealthy neighborhood where no restaurant should be.",
+    "p2": "Nearly wordless, built on atmosphere and sound, the film revisits the pandemic from street level: not the headlines, but the man pedaling between them — and what he's willing to carry to keep his family fed.",
+    "p3": "The short is the first door into a larger universe: a feature film set in the same world is in development."
+  },
+  "facts": [
+    {
+      "k": "Format",
+      "v": "Short Film · ~5 min"
+    },
+    {
+      "k": "Genre",
+      "v": "Eerie Urban Drama"
+    },
+    {
+      "k": "Language",
+      "v": "English"
+    },
+    {
+      "k": "Location",
+      "v": "Montréal, QC"
+    },
+    {
+      "k": "Shoot",
+      "v": "Two nights · Sept 4–6, 2026"
+    },
+    {
+      "k": "Status",
+      "v": "In Development"
+    },
+    {
+      "k": "Target",
+      "v": "International Festivals"
+    }
+  ],
+  "tone": {
+    "label": "The Tone",
+    "quote": "Outside,\n*Drive*.\nInside,\n*Uncut Gems*.",
+    "text": "The ride is hypnotic — empty streets, sodium light, a city that belongs to one rider. Then a door opens and the film changes gear: overlapping voices, too many screens, a deal nobody names. Calm outside. Fever inside. Ask us for the script."
+  },
+  "team": {
+    "label": "The Team",
+    "heading": "Made in Montréal",
+    "intro": "An independent collaboration — no studio, no funding, no favors owed. A crew of working professionals building a festival short on craft and goodwill.",
+    "members": [
+      {
+        "role": "Writer · Director · Co-Producer",
+        "name": "Kiril Shmidov",
+        "bio": "Montréal-based filmmaker striving to make people think and feel, from canvas to celluloid. His work spans visual art, commercial work and film.",
+        "link": "https://kirilshmidov.com/"
+      },
+      {
+        "role": "Co-Producer",
+        "name": "Patrick Saad",
+        "bio": "Independent producer (L'inis 2023, Louise-Spickler excellence scholarship) with 15+ years in video production. Credits include *Walter* (Fantasia 2025), *Mes plus beaux jours* and *Hôtel Beyrouth*.",
+        "link": "https://patricksaad.ca"
+      },
+      {
+        "role": "Director of Photography",
+        "name": "Danik Bartolini",
+        "bio": "Montréal cinematographer and director with a story-first visual signature. His work spans film — *Walter*, *Prospect* — and commercial work for The North Face, Jordan and UFC.",
+        "link": "https://www.danikbartolini.com/"
+      }
+    ]
+  },
+  "crew": {
+    "label": "Crew Call",
+    "heading": "We're building a crew",
+    "roles": [
+      "1st Assistant Director",
+      "Art Director / Costumes",
+      "Makeup Artist",
+      "UPM",
+      "Production Assistant"
+    ],
+    "fr": "On cherche : 1er assistant réal · direction artistique / costumes · maquillage · dir. de production · assistant de production",
+    "pitch": "We spend our careers enslaved to clients — this one's ours. A chance to be kids in a playground again. The kicker: it's pro-bono and self-financed, so the budget is laughable. Hell of a pitch, eh. What's actually on the table: a top-notch production and post crew, a designed festival short, full credit, finished material for your reel — and two night shoots over Labor Day weekend (Sept 4–6), locked around everyone's availability.",
+    "slogan": "Do something creative, for once.",
+    "cta_text": "Get in touch",
+    "cta_email": "info@patricksaad.ca"
+  },
+  "footer": {
+    "text": "An independent short film. Shot on location in Montréal.\n© 2026 — All rights reserved.",
+    "fine": "Montréal · Short Film · 2026"
+  }
+}
