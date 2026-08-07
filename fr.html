@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DELIVERY — Court métrage montréalais</title>
+<meta name="description" content="DELIVERY — un court métrage inquiétant tourné à Montréal. Août 2020 : un livreur à vélo, un bébé en route, une commande de fin de soirée d'un restaurant qui n'existe pas.">
+<meta property="og:title" content="DELIVERY — Court métrage montréalais">
+<meta property="og:description" content="Août 2020. Un livreur à vélo accepte une commande d'un restaurant qui n'existe pas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600&family=Archivo:ital,wght@0,400;0,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:        #131110;
+  --ink-deep:   #0B0A09;
+  --orange:     #E8963C;
+  --cream:      #F2E9D8;
+  --cream-dim:  #C9BFAC;
+  --grey:       #3A3733;
+  --display:    'Anton', sans-serif;
+  --label:      'Oswald', sans-serif;
+  --body:       'Archivo', sans-serif;
+  --max:        1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--cream-dim);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--orange);color:var(--ink)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.05;z-index:5;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E")}
+a{color:var(--orange);text-decoration:none}
+a:hover{color:var(--cream)}
+img{display:block;width:100%;height:auto}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.label{font-family:var(--label);font-weight:500;text-transform:uppercase;letter-spacing:.42em;font-size:13px;color:var(--orange)}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:color-mix(in srgb, var(--ink-deep) 92%, transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--grey)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.wordmark{font-family:var(--display);font-size:20px;letter-spacing:.28em;color:var(--cream)}
+.wordmark span{color:var(--orange)}
+nav ul{display:flex;gap:34px;list-style:none}
+nav ul a{font-family:var(--label);font-weight:400;text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--cream-dim);border-bottom:2px solid transparent;padding-bottom:4px;white-space:nowrap}
+nav ul a:hover{color:var(--cream);border-color:var(--orange)}
+@media(max-width:640px){nav ul{gap:14px}nav ul a{font-size:10px;letter-spacing:.08em}.wordmark{font-size:16px;letter-spacing:.2em}}
+header{min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 24px 40px;position:relative}
+h1{font-family:var(--display);color:var(--cream);font-size:clamp(64px,14vw,190px);line-height:.95;letter-spacing:.12em;margin:18px 0 22px;text-indent:.12em}
+@media(max-width:430px){h1{font-size:clamp(46px,14.5vw,60px);letter-spacing:.07em;text-indent:.07em}}
+.logline{max-width:640px;font-size:clamp(17px,2.2vw,21px);color:var(--cream-dim)}
+.logline em{color:var(--cream);font-style:italic;font-weight:600}
+.scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-family:var(--label);font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--grey)}
+.band{position:relative}
+.band img{filter:saturate(.98)}
+.ride-stack{overflow:hidden}
+.ride-stack .ride-mid,.ride-stack .ride-far{position:absolute;inset:0;height:100%;object-fit:cover;opacity:0}
+section{padding:110px 0}
+h2{font-family:var(--display);color:var(--cream);font-size:clamp(34px,5.5vw,64px);letter-spacing:.08em;line-height:1.05;margin:14px 0 30px}
+.rule{width:64px;height:5px;background:var(--orange);margin-bottom:26px}
+.film-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:start}
+.film-grid p{margin-bottom:20px;max-width:56ch}
+.film-grid p strong{color:var(--cream)}
+.facts{border-top:1px solid var(--grey);margin-top:8px}
+.facts div{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-bottom:1px solid var(--grey);font-family:var(--label);text-transform:uppercase;font-size:12.5px;letter-spacing:.14em}
+.facts dt{color:var(--grey)}
+.facts dd{color:var(--cream);text-align:right}
+@media(max-width:860px){.film-grid{grid-template-columns:1fr;gap:40px}}
+.door-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;background:var(--ink-deep)}
+.door-grid .txt{display:flex;flex-direction:column;justify-content:center;padding:80px 8vw}
+.big-quote{font-family:var(--display);color:var(--cream);font-size:clamp(40px,6vw,84px);letter-spacing:.1em;line-height:1.1}
+.big-quote span{color:var(--orange)}
+.door-grid .txt p{margin-top:26px;max-width:44ch}
+.door-stack{position:relative;overflow:hidden}
+.door-stack img{width:100%;height:100%;object-fit:cover}
+.door-stack .door-ajar,.door-stack .door-open{position:absolute;inset:0;opacity:0}
+@media(max-width:860px){.door-grid{grid-template-columns:1fr}.door-stack{max-height:80vh}}
+@media(prefers-reduced-motion:reduce){.door-stack .door-open{opacity:1 !important}}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:10px}
+.card{background:var(--ink-deep);border:1px solid var(--grey);padding:34px 30px 30px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s}
+.card:hover{border-color:var(--orange)}
+.card .role{font-family:var(--label);font-weight:500;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--orange)}
+.card h3{font-family:var(--display);font-size:30px;letter-spacing:.06em;color:var(--cream);line-height:1.1}
+.card p{font-size:15px;flex:1}
+.card a{font-family:var(--label);font-size:12px;letter-spacing:.2em;text-transform:uppercase;border-bottom:2px solid var(--orange);align-self:flex-start;padding-bottom:3px}
+@media(max-width:860px){.team-grid{grid-template-columns:1fr}}
+.crew{background:var(--orange);color:var(--ink)}
+.crew .label{color:var(--ink);opacity:.75}
+.crew h2{color:var(--ink)}
+.crew .rule{background:var(--ink)}
+.roles{display:flex;flex-wrap:wrap;gap:14px;margin:26px 0 8px}
+.roles span{font-family:var(--display);font-size:clamp(20px,3vw,34px);letter-spacing:.08em;border:3px solid var(--ink);padding:10px 22px;color:var(--ink)}
+.crew .fr{font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase;margin:22px 0 6px;opacity:.8}
+.slogan{font-family:var(--body);font-style:italic;font-weight:700;font-size:clamp(22px,3.4vw,34px);color:var(--ink);margin:34px 0 12px}
+.crew p.pitch{max-width:62ch;color:var(--ink);font-weight:500}
+.cta{display:inline-block;margin-top:30px;background:var(--ink);color:var(--orange);font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.25em;font-size:14px;padding:18px 42px}
+.cta:hover{background:var(--ink-deep);color:var(--cream)}
+footer{background:var(--ink-deep);border-top:1px solid var(--grey);padding:70px 0 50px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:flex-end}
+footer .wordmark{font-size:26px}
+footer p{font-size:13.5px;color:var(--grey);max-width:52ch}
+footer .fine{font-family:var(--label);font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <div class="wordmark">DELIVER<span>Y</span></div>
+    <ul>
+      <li><a href="#film">Le film</a></li>
+      <li><a href="#team">Équipe</a></li>
+      <li><a href="#crew">Rejoindre l'équipe</a></li>
+      <li><a href="./">EN</a></li>
+    </ul>
+  </div>
+</nav>
+<header>
+  <div class="label">Montréal &nbsp;·&nbsp; Court métrage &nbsp;·&nbsp; En développement</div>
+  <h1>DELIVERY</h1>
+  <p class="logline">Août 2020. Confinement. Les chèques d'urgence sont épuisés, et les livreurs ne sont plus des travailleurs essentiels — <em>ce sont des esclaves jetables.</em> Un livreur reçoit une commande d'un restaurant suspect.</p>
+  <div class="scroll-cue">Défiler</div>
+</header>
+<div class="band ride-stack" aria-label="A lone bicycle courier rides away into an empty city at night as you scroll — flat screen-print illustration in black, orange and cream.">
+  <img class="ride-near" alt="" src="https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__5/image-498ad710-baae-49d9-8476-e06743fd00ac.png?Expires=2101423558&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=XViweoW29n34QwB2-jtR38NijZ~u65bMB5Br3byXV6wffmBf2SR93C87EQ16Ok6MclvUZTWqOplSNwsN3tRIFxXs-Nnxtlh-bPDtOu3eHhxSHQ7aC4Lh3TgUtbTdyhI2VcWKN4sSKbCStAuX2Q6VMbgqk69iiRdCY63pAVcKwppXAOCxC4mVj1gEyeM3L~WDuxeApPqptDJ2crK3~5P-k4Q0x2r~K6vvv9-4akYc149janzfn5va6zihjhgfY-SVgVuH3CohyHjJJns0INXjBxJEOrSDFTIWOhd-pDMuZ57gybxGrLiLFc7xWN7fHoOg7RYIWpxz-hjhzmQtFQkQgg__">
+  <img class="ride-mid" alt="" src="https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__3/image-14752e8f-b853-43dc-9499-a0145e51ea07.png?Expires=2101426033&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=H3Ajj6PZBJ2ZkIJ05CBSayPdl3T9zlAZftxZkTw97knMsY6aozWfLVwiBkEJUdkS4MLZWaM9nuKvmFe9GvVYioRG9edChXSaD4uvlHGLGHYXL4tKxvK2hAWZbVNlSmTd9cIAaj9LfAT~noHWszxatSXI-47M9ud-204TNSCK7773jW~dLiWgvcl-RXoqmuGHJGPrb8YENg-oq8~qUN6tJKPbd24grlwk3dYI1-tVPPJuqRkZ0ix0lWAHTmlVJKCYSebg4UKSAYB7lon08IS3O75W6rAV7mEVPpIgx438ULshnZG0egBgccaJHohyI96hLG~SFD87JwcW8kgoKgV2Vw__">
+  <img class="ride-far" alt="" src="https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__5/image-b38f58d2-0335-44d4-93b4-f9c45bdab625.png?Expires=2101426079&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=jA4iUnxhmT38CZOFWDhbxACie41iTTAMwKIRqXJTlyphodWoWX-5OWfhUzEhmkNXdHPcUKvfk-CFKR8Q8oUdcC1IE-ZxRTcv2LAZpzvDErbRp7x8QA~YUWIjFiNSZySKwiczQLJeqZ0ljkqbYjXt1H8WWq0SrYQLzz57NB5p4Eb0cvXGDryxVQGnG6-K6ELoGbZNQis4rLJkC32viRgFDt8GIBv~ySxTc-g9Z04Ex10IOJpujQyu2ZDUOp9jkcv3MdjUHv4jgW3qAklken9zABlLOZ3rqf9Xq2Pkw6emVUyazMZnxyT68zVW0pr~d9~0cqd20Gd3NJtACZ6T6~2-ZA__">
+</div>
+<section id="film">
+  <div class="wrap film-grid">
+    <div>
+      <div class="label">Le film</div>
+      <div class="rule" style="margin-top:14px"></div>
+      <h2>Une nuit.<br>Une commande.</h2>
+      <p><strong>DELIVERY, c'est la course d'une seule nuit à travers une ville sur pause</strong> — racontée depuis la selle du seul travailleur que le confinement a oublié de protéger. Des rues vides, un canal silencieux, et une adresse dans un quartier cossu où aucun restaurant ne devrait exister.</p>
+      <p>Presque sans dialogue, porté par l'atmosphère et le son, le film revisite la pandémie à hauteur de rue : pas les manchettes, mais l'homme qui pédale entre elles — et ce qu'il est prêt à transporter pour nourrir sa famille.</p>
+      <p>Le court métrage est la première porte d'un univers plus vaste : un long métrage campé dans le même monde est en développement.</p>
+    </div>
+    <div>
+      <dl class="facts">
+        <div><dt>Format</dt><dd>Court métrage · ~5 min</dd></div>
+        <div><dt>Genre</dt><dd>Drame urbain inquiétant</dd></div>
+        <div><dt>Langue</dt><dd>Anglais</dd></div>
+        <div><dt>Lieu</dt><dd>Montréal, QC</dd></div>
+        <div><dt>Tournage</dt><dd>Deux nuits · 4–6 sept. 2026</dd></div>
+        <div><dt>Statut</dt><dd>En développement</dd></div>
+        <div><dt>Cible</dt><dd>Festivals internationaux</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+<div class="door-grid">
+  <div class="txt">
+    <div class="label">Le ton</div>
+    <div class="big-quote" style="margin-top:16px">Dehors,<br><span>Drive</span>.<br>Dedans,<br><span>Uncut Gems</span>.</div>
+    <p>La course est hypnotique — rues vides, lumière au sodium, une ville qui appartient à un seul cycliste. Puis une porte s'ouvre et le film change de vitesse : des voix qui se chevauchent, trop d'écrans, une transaction que personne ne nomme. Calme dehors. Fièvre dedans. Demandez-nous le scénario.</p>
+  </div>
+  <div class="door-stack" aria-label="A door in a vast black wall opens as you scroll, warm orange light spilling out — flat screen-print illustration.">
+    <img class="door-shut" alt="" src="https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__6/image-81bfc602-a262-469a-bf06-a60b77fdf504.png?Expires=2101427424&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=Z9QE5zppVQCe7JeEJZNtChW0Z08NQaZ27uaOZTS-OAbOFgOk~U5a7UJPzG2Vd7wH~sezcLTai1Sht9pwzLC-ZGmQyvk2S1cXCrcrToSqNGuMqMBiVsHRbSl4WaDJENTYGC0gglBcl9kusMUuHszfbD2U2WtpaU4ftHa9Pb1Wnzu2sc7ZyQJIl4ErIFQdrmxbk2o85Ng4lzPft0oeEiXYZFHvtUIdslXIs2fTBx7ihYAz3bMC27LlP5FNmdNGb5pDNZMdopVvmPp9j02RpPXwEasUtLJbVk9IJa0N2KEE4c9yOQjD31sUpj7uutE9OPlEkocEsb2yNmAZUomJMUrFtw__">
+    <img class="door-ajar" alt="" src="https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__10/image-9ac04ce4-e434-4ff4-8195-0344e08d0d28.png?Expires=2101425549&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=dgkOTj8y8oCXYLB5kOigjPO1CjXLpLtQjainBZ2biA~lixuJcCNY7akC39S9rei0gc0msR1CDbSAS2qRc9am045DGz3mUYeG6UBhZkGvqlH8Css9NulrRVZ2lAa~zDinQ~7hF-r9tXOJYOP4xw-wzrngG8~niG8VDGnWfQ0SEC-qnTsTHwpVBGC1lfrkfGDQB~B4y8AhxiB2VzbSFYLhxtWoTzExDcXlKxXx3bPM5GjzzYohhLkqq~WVfgQMo1pFFgumSPzItl02wE~E8jy~ExGrB0p8Rl5yK9wMVvJORAaWwhr16jyygCrhnQIsTidPnxGd0UphcKhiOvZrUjZKIg__">
+    <img class="door-open" alt="" src="https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__6/image-ddf0b508-e15e-43b7-a39a-54fc46e42718.png?Expires=2101423604&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=Gbe~a9mXPZh8hUx6bW0yP3uyxFXeoOtNn06PhG7P-~Mpa4~gr7snwtm0hSwoAT3NXxniMq~mt2y--TeDwk3BnphL8wP1OPkaQ~5MewSa7Nl8N0V3iIr2F9HWgX8x7kgCdXiSAxVVNI~HGbDdrwJ8B2gcFudSxRameITLAhf4gS-~dN~G9rtHXWRtFH-aWY8n~JOGnYsSxOEMGPNkIqEKfxdci5mfOXW2QGVmvNYKzO3sOe5jFAqqK2fOgYFZG12fi6DMiNflBESQBuWe7K2VjkgrI5p5TEyCdcACI6aD3F~DqpGUETdj7x62qlmx6xpND53q~3LTX7AabhNkl7WWVQ__">
+  </div>
+</div>
+<section id="team">
+  <div class="wrap">
+    <div class="label">L'équipe</div>
+    <div class="rule" style="margin-top:14px"></div>
+    <h2>Fait à Montréal</h2>
+    <p style="max-width:62ch;margin-bottom:40px">Une collaboration indépendante — pas de studio, pas de financement, pas de dettes. Une équipe de professionnels qui construit un court métrage de festival sur le métier et la bonne volonté.</p>
+    <div class="team-grid">
+      <div class="card">
+        <div class="role">Scénariste · Réalisateur · Coproducteur</div>
+        <h3>Kiril Shmidov</h3>
+        <p>Cinéaste montréalais qui cherche à faire penser et ressentir, du canevas au celluloïd. Son travail traverse l'art visuel, la publicité et le cinéma.</p>
+        <a href="https://kirilshmidov.com/" target="_blank" rel="noopener">Portfolio</a>
+      </div>
+      <div class="card">
+        <div class="role">Coproducteur</div>
+        <h3>Patrick Saad</h3>
+        <p>Producteur indépendant (L'inis 2023, bourse d'excellence Louise-Spickler), plus de 15 ans en production vidéo. Au générique : <em>Walter</em> (Fantasia 2025), <em>Mes plus beaux jours</em> et <em>Hôtel Beyrouth</em>.</p>
+        <a href="https://patricksaad.ca" target="_blank" rel="noopener">Portfolio</a>
+      </div>
+      <div class="card">
+        <div class="role">Directeur photo</div>
+        <h3>Danik Bartolini</h3>
+        <p>Directeur photo et réalisateur montréalais à la signature visuelle ancrée dans le récit. Son travail passe du cinéma — <em>Walter</em>, <em>Prospect</em> — à la publicité pour The North Face, Jordan et UFC.</p>
+        <a href="https://www.danikbartolini.com/" target="_blank" rel="noopener">Portfolio</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="crew" id="crew">
+  <div class="wrap">
+    <div class="label">Appel d'équipe</div>
+    <div class="rule" style="margin-top:14px"></div>
+    <h2>On monte une équipe</h2>
+    <div class="roles">
+      <span>1er assistant réalisateur</span>
+      <span>Direction artistique / Costumes</span>
+      <span>Maquillage</span>
+      <span>Directeur de production</span>
+      <span>Assistant de production</span>
+    </div>
+    <div class="fr">Looking for: 1st AD · art direction / costumes · makeup · UPM · PA — English welcome</div>
+    <p class="pitch">On passe nos carrières asservis à des clients — celui-là est à nous. Une chance de redevenir des enfants dans une cour d'école. Le hic : c'est bénévole et autofinancé, alors le budget est risible. Tout un pitch, hein. Ce qui est vraiment sur la table : une équipe de production et de post-production de haut niveau, un court métrage de festival soigné, un crédit complet, du matériel fini pour ta bobine — et deux nuits de tournage la fin de semaine de la fête du Travail (4–6 sept.), calées sur les disponibilités de tout le monde.</p>
+    <div class="slogan">Fais quelque chose de créatif, pour une fois.</div>
+    <a class="cta" href="mailto:info@patricksaad.ca?subject=DELIVERY%20—%20Crew">Écris-nous</a>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="wordmark">DELIVER<span>Y</span></div>
+      <p style="margin-top:14px">Un court métrage indépendant. Tourné à Montréal.<br>© 2026 — Tous droits réservés.</p>
+    </div>
+    <p class="fine">Montréal · Court métrage · 2026</p>
+  </div>
+</footer>
+<script>
+(function(){
+  function md(s, orange){
+    s=String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    s=s.replace(/\n/g,'<br>');
+    s=s.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+    s=s.replace(/\*([^*]+)\*/g, orange?'<span>$1</span>':'<em>$1</em>');
+    return s;
+  }
+  function set(sel, html){ var el=document.querySelector(sel); if(el&&html!=null) el.innerHTML=html; }
+  fetch('content-fr.json?v='+Date.now()).then(function(r){return r.json();}).then(function(c){
+    set('header .label', md(c.hero.kicker));
+    set('header h1', md(c.hero.title));
+    set('.logline', md(c.hero.logline));
+    set('#film .label', md(c.film.label));
+    set('#film h2', md(c.film.heading));
+    var ps=document.querySelectorAll('#film .film-grid > div:first-child p');
+    if(ps[0])ps[0].innerHTML=md(c.film.p1); if(ps[1])ps[1].innerHTML=md(c.film.p2); if(ps[2])ps[2].innerHTML=md(c.film.p3);
+    var dl=document.querySelector('.facts');
+    if(dl){ dl.innerHTML=c.facts.map(function(f){return '<div><dt>'+md(f.k)+'</dt><dd>'+md(f.v)+'</dd></div>';}).join(''); }
+    set('.door-grid .label', md(c.tone.label));
+    set('.big-quote', md(c.tone.quote, true));
+    set('.door-grid .txt p', md(c.tone.text));
+    set('#team .label', md(c.team.label));
+    set('#team h2', md(c.team.heading));
+    set('#team > .wrap > p', md(c.team.intro));
+    var tg=document.querySelector('.team-grid');
+    if(tg){ tg.innerHTML=c.team.members.map(function(m){
+      return '<div class="card"><div class="role">'+md(m.role)+'</div><h3>'+md(m.name)+'</h3><p>'+md(m.bio)+'</p><a href="'+encodeURI(m.link)+'" target="_blank" rel="noopener">Portfolio</a></div>';
+    }).join(''); }
+    set('#crew .label', md(c.crew.label));
+    set('#crew h2', md(c.crew.heading));
+    var roles=document.querySelector('.roles');
+    if(roles){ roles.innerHTML=c.crew.roles.map(function(r){return '<span>'+md(r)+'</span>';}).join(''); }
+    set('#crew .fr', md(c.crew.fr));
+    set('#crew .pitch', md(c.crew.pitch));
+    set('#crew .slogan', md(c.crew.slogan));
+    var cta=document.querySelector('#crew .cta');
+    if(cta){ cta.textContent=c.crew.cta_text; cta.href='mailto:'+c.crew.cta_email+'?subject=DELIVERY%20%E2%80%94%20Crew'; }
+    set('footer .wrap > div > p', md(c.footer.text));
+    set('footer .fine', md(c.footer.fine));
+  }).catch(function(){});
+})();
+</script>
+<script>
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var ride=document.querySelector('.ride-stack');
+  var rideMid=ride&&ride.querySelector('.ride-mid');
+  var rideFar=ride&&ride.querySelector('.ride-far');
+  var door=document.querySelector('.door-stack');
+  var doorAjar=door&&door.querySelector('.door-ajar');
+  var doorOpen=door&&door.querySelector('.door-open');
+  function ss(a,b,x){
+    var t=Math.max(0,Math.min((x-a)/(b-a),1));
+    return t*t*(3-2*t);
+  }
+  function frame(){
+    var vh=window.innerHeight;
+    if(ride&&rideMid&&rideFar){
+      var r=ride.getBoundingClientRect();
+      var p=(vh-r.top)/(vh+r.height);
+      p=Math.max(0,Math.min(p,1));
+      rideMid.style.opacity=ss(0.45,0.56,p);
+      rideFar.style.opacity=ss(0.68,0.78,p);
+    }
+    if(door&&doorAjar&&doorOpen){
+      var d=door.getBoundingClientRect();
+      var x=(d.top+d.height/2-vh/2)/(vh/2+d.height/2);
+      doorAjar.style.opacity=(1-ss(0.36,0.50,x))*ss(-0.60,-0.46,x);
+      doorOpen.style.opacity=(1-ss(0.08,0.22,x))*ss(-0.42,-0.28,x);
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
