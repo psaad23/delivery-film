@@ -1,6 +1,6 @@
 {
   "hero": {
-    "kicker": "Montréal · Short Film · In Development",
+    "kicker": "Montréal · Short Film · In Development ·",
     "title": "DELIVERY",
     "logline": "August 2020. Pandemic lockdown. Stimulus checks have dried up, and food deliverers are no longer essential workers — *they're expendable slaves.* One deliverer gets an order from a suspicious restaurant."
   },
@@ -52,20 +52,20 @@
     "intro": "An independent collaboration — no studio, no funding, no favors owed. A crew of working professionals building a festival short on craft and goodwill.",
     "members": [
       {
-        "role": "Writer · Director · Co-Producer",
         "name": "Kiril Shmidov",
+        "role": "Writer · Director · Co-Producer",
         "bio": "Montréal-based filmmaker striving to make people think and feel, from canvas to celluloid. His work spans visual art, commercial work and film.",
         "link": "https://kirilshmidov.com/"
       },
       {
-        "role": "Co-Producer",
         "name": "Patrick Saad",
+        "role": "Co-Producer",
         "bio": "Independent producer (L'inis 2023, Louise-Spickler excellence scholarship) with 15+ years in video production. Credits include *Walter* (Fantasia 2025), *Mes plus beaux jours* and *Hôtel Beyrouth*.",
         "link": "https://patricksaad.ca"
       },
       {
-        "role": "Director of Photography",
         "name": "Danik Bartolini",
+        "role": "Director of Photography",
         "bio": "Montréal cinematographer and director with a story-first visual signature. His work spans film — *Walter*, *Prospect* — and commercial work for The North Face, Jordan and UFC.",
         "link": "https://www.danikbartolini.com/"
       }
