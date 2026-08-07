@@ -90,5 +90,18 @@
   "footer": {
     "text": "An independent short film. Shot on location in Montréal.\n© 2026 — All rights reserved.",
     "fine": "Montréal · Short Film · 2026"
+  },
+  "theme": {
+    "accent": "#E8963C",
+    "ink": "#131110",
+    "cream": "#F2E9D8"
+  },
+  "media": {
+    "ride_near": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__5/image-498ad710-baae-49d9-8476-e06743fd00ac.png?Expires=2101423558&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=XViweoW29n34QwB2-jtR38NijZ~u65bMB5Br3byXV6wffmBf2SR93C87EQ16Ok6MclvUZTWqOplSNwsN3tRIFxXs-Nnxtlh-bPDtOu3eHhxSHQ7aC4Lh3TgUtbTdyhI2VcWKN4sSKbCStAuX2Q6VMbgqk69iiRdCY63pAVcKwppXAOCxC4mVj1gEyeM3L~WDuxeApPqptDJ2crK3~5P-k4Q0x2r~K6vvv9-4akYc149janzfn5va6zihjhgfY-SVgVuH3CohyHjJJns0INXjBxJEOrSDFTIWOhd-pDMuZ57gybxGrLiLFc7xWN7fHoOg7RYIWpxz-hjhzmQtFQkQgg__",
+    "ride_mid": "https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__3/image-14752e8f-b853-43dc-9499-a0145e51ea07.png?Expires=2101426033&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=H3Ajj6PZBJ2ZkIJ05CBSayPdl3T9zlAZftxZkTw97knMsY6aozWfLVwiBkEJUdkS4MLZWaM9nuKvmFe9GvVYioRG9edChXSaD4uvlHGLGHYXL4tKxvK2hAWZbVNlSmTd9cIAaj9LfAT~noHWszxatSXI-47M9ud-204TNSCK7773jW~dLiWgvcl-RXoqmuGHJGPrb8YENg-oq8~qUN6tJKPbd24grlwk3dYI1-tVPPJuqRkZ0ix0lWAHTmlVJKCYSebg4UKSAYB7lon08IS3O75W6rAV7mEVPpIgx438ULshnZG0egBgccaJHohyI96hLG~SFD87JwcW8kgoKgV2Vw__",
+    "ride_far": "https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__5/image-b38f58d2-0335-44d4-93b4-f9c45bdab625.png?Expires=2101426079&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=jA4iUnxhmT38CZOFWDhbxACie41iTTAMwKIRqXJTlyphodWoWX-5OWfhUzEhmkNXdHPcUKvfk-CFKR8Q8oUdcC1IE-ZxRTcv2LAZpzvDErbRp7x8QA~YUWIjFiNSZySKwiczQLJeqZ0ljkqbYjXt1H8WWq0SrYQLzz57NB5p4Eb0cvXGDryxVQGnG6-K6ELoGbZNQis4rLJkC32viRgFDt8GIBv~ySxTc-g9Z04Ex10IOJpujQyu2ZDUOp9jkcv3MdjUHv4jgW3qAklken9zABlLOZ3rqf9Xq2Pkw6emVUyazMZnxyT68zVW0pr~d9~0cqd20Gd3NJtACZ6T6~2-ZA__",
+    "door_shut": "https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__6/image-81bfc602-a262-469a-bf06-a60b77fdf504.png?Expires=2101427424&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=Z9QE5zppVQCe7JeEJZNtChW0Z08NQaZ27uaOZTS-OAbOFgOk~U5a7UJPzG2Vd7wH~sezcLTai1Sht9pwzLC-ZGmQyvk2S1cXCrcrToSqNGuMqMBiVsHRbSl4WaDJENTYGC0gglBcl9kusMUuHszfbD2U2WtpaU4ftHa9Pb1Wnzu2sc7ZyQJIl4ErIFQdrmxbk2o85Ng4lzPft0oeEiXYZFHvtUIdslXIs2fTBx7ihYAz3bMC27LlP5FNmdNGb5pDNZMdopVvmPp9j02RpPXwEasUtLJbVk9IJa0N2KEE4c9yOQjD31sUpj7uutE9OPlEkocEsb2yNmAZUomJMUrFtw__",
+    "door_ajar": "https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__10/image-9ac04ce4-e434-4ff4-8195-0344e08d0d28.png?Expires=2101425549&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=dgkOTj8y8oCXYLB5kOigjPO1CjXLpLtQjainBZ2biA~lixuJcCNY7akC39S9rei0gc0msR1CDbSAS2qRc9am045DGz3mUYeG6UBhZkGvqlH8Css9NulrRVZ2lAa~zDinQ~7hF-r9tXOJYOP4xw-wzrngG8~niG8VDGnWfQ0SEC-qnTsTHwpVBGC1lfrkfGDQB~B4y8AhxiB2VzbSFYLhxtWoTzExDcXlKxXx3bPM5GjzzYohhLkqq~WVfgQMo1pFFgumSPzItl02wE~E8jy~ExGrB0p8Rl5yK9wMVvJORAaWwhr16jyygCrhnQIsTidPnxGd0UphcKhiOvZrUjZKIg__",
+    "door_open": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__6/image-ddf0b508-e15e-43b7-a39a-54fc46e42718.png?Expires=2101423604&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=Gbe~a9mXPZh8hUx6bW0yP3uyxFXeoOtNn06PhG7P-~Mpa4~gr7snwtm0hSwoAT3NXxniMq~mt2y--TeDwk3BnphL8wP1OPkaQ~5MewSa7Nl8N0V3iIr2F9HWgX8x7kgCdXiSAxVVNI~HGbDdrwJ8B2gcFudSxRameITLAhf4gS-~dN~G9rtHXWRtFH-aWY8n~JOGnYsSxOEMGPNkIqEKfxdci5mfOXW2QGVmvNYKzO3sOe5jFAqqK2fOgYFZG12fi6DMiNflBESQBuWe7K2VjkgrI5p5TEyCdcACI6aD3F~DqpGUETdj7x62qlmx6xpND53q~3LTX7AabhNkl7WWVQ__"
   }
 }
