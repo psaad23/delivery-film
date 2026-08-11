@@ -78,10 +78,11 @@
       "1st Assistant Director",
       "Art Director / Costumes",
       "Makeup Artist",
+      "Sound Recordist / Boom Op",
       "UPM",
       "Production Assistant"
     ],
-    "fr": "On cherche : 1er assistant réal · direction artistique / costumes · maquillage · dir. de production · assistant de production",
+    "fr": "On cherche : 1er assistant réal · direction artistique / costumes · maquillage · preneur de son / perchiste · dir. de production · assistant de production",
     "pitch": "We spend our careers enslaved to clients. This one's ours: a chance to be kids in a playground again. The kicker: it's pro-bono and self-financed, so the budget is laughable. Hell of a pitch, eh. What's actually on the table: a top-notch production and post crew, a designed festival short, full credit, finished material for your reel, plus two night shoots over Labor Day weekend (Sept 4–6), locked around everyone's availability.",
     "slogan": "Do something creative, for once.",
     "cta_text": "Get in touch",
@@ -92,14 +93,16 @@
     "fine": "Montréal · Short Film · 2026"
   },
   "theme": {
-    "accent": "#E8963C",
-    "ink": "#131110",
-    "cream": "#F2E9D8"
+    "accent": "#FFA733",
+    "ink": "#03080C",
+    "cream": "#E4F1F3",
+    "cyan": "#7FE9E2",
+    "night": "#0C2833"
   },
   "media": {
-    "ride_near": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__5/image-498ad710-baae-49d9-8476-e06743fd00ac.png?Expires=2101423558&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=XViweoW29n34QwB2-jtR38NijZ~u65bMB5Br3byXV6wffmBf2SR93C87EQ16Ok6MclvUZTWqOplSNwsN3tRIFxXs-Nnxtlh-bPDtOu3eHhxSHQ7aC4Lh3TgUtbTdyhI2VcWKN4sSKbCStAuX2Q6VMbgqk69iiRdCY63pAVcKwppXAOCxC4mVj1gEyeM3L~WDuxeApPqptDJ2crK3~5P-k4Q0x2r~K6vvv9-4akYc149janzfn5va6zihjhgfY-SVgVuH3CohyHjJJns0INXjBxJEOrSDFTIWOhd-pDMuZ57gybxGrLiLFc7xWN7fHoOg7RYIWpxz-hjhzmQtFQkQgg__",
-    "ride_mid": "https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__3/image-14752e8f-b853-43dc-9499-a0145e51ea07.png?Expires=2101426033&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=H3Ajj6PZBJ2ZkIJ05CBSayPdl3T9zlAZftxZkTw97knMsY6aozWfLVwiBkEJUdkS4MLZWaM9nuKvmFe9GvVYioRG9edChXSaD4uvlHGLGHYXL4tKxvK2hAWZbVNlSmTd9cIAaj9LfAT~noHWszxatSXI-47M9ud-204TNSCK7773jW~dLiWgvcl-RXoqmuGHJGPrb8YENg-oq8~qUN6tJKPbd24grlwk3dYI1-tVPPJuqRkZ0ix0lWAHTmlVJKCYSebg4UKSAYB7lon08IS3O75W6rAV7mEVPpIgx438ULshnZG0egBgccaJHohyI96hLG~SFD87JwcW8kgoKgV2Vw__",
-    "ride_far": "https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__5/image-b38f58d2-0335-44d4-93b4-f9c45bdab625.png?Expires=2101426079&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=jA4iUnxhmT38CZOFWDhbxACie41iTTAMwKIRqXJTlyphodWoWX-5OWfhUzEhmkNXdHPcUKvfk-CFKR8Q8oUdcC1IE-ZxRTcv2LAZpzvDErbRp7x8QA~YUWIjFiNSZySKwiczQLJeqZ0ljkqbYjXt1H8WWq0SrYQLzz57NB5p4Eb0cvXGDryxVQGnG6-K6ELoGbZNQis4rLJkC32viRgFDt8GIBv~ySxTc-g9Z04Ex10IOJpujQyu2ZDUOp9jkcv3MdjUHv4jgW3qAklken9zABlLOZ3rqf9Xq2Pkw6emVUyazMZnxyT68zVW0pr~d9~0cqd20Gd3NJtACZ6T6~2-ZA__",
+    "ride_near": "https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__4/image-6db401a4-815f-42b4-888f-f7c5171577ed.png?Expires=2101775893&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=aoCgW7auYZCEeUyuNnxaoCCWJ-ln6r0CFRZWWQAUh~9esLzToxe~9YiXyvr92RmLv1Mvpq~Dvx8-A0fNF~wVhdojScp2kVq9CLcVNjznJCHC8FJeJAVMdyZ9YU2uArc3ZoaW~S9rlcUktKCPcT75nUVwVE~LhR42nZqaR8XRLapPqM4GMD4i~Gpa2fLvr3rbowwhaldfIXPtSZfmsOx~R-afqqq-zSaW1hkRRH73tWoVRfq7sRqmwNpVpeqCAoIOK-eArGYktH8~VeuFuvBAJZssyFQvTREXq80Eur41vH9Qa6qn~s36hjYXekgpDlV3J7PerMym0XZMse7zLfA5wQ__",
+    "ride_mid": "https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__7/image-e8816ed4-97b1-4871-98ce-5a0d6f8da634.png?Expires=2101776010&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=GN1iLOGmh1QtM5qbu3o-ADp-lnbrsJYROmjG-aEODWfscpz8nFLPIPotTTb2C4rI6kdEZxLOOzBFTAyKUksZs1vTzXwCfzE~BFHoUyMH~IH~jQ6n3S8lTHhEknWBe8nQU4fkqfcYIAIGOCdtSBSGM6v7i1dRz~vvfG~iIKwAo~6h8JDDntKe06rQLWQ~nokmyWAZScamUOZAbO~f17xUxCikgnLzour~4yox2FP8NAtGouYm~S1bkMdNkYcAK3u5FkycChzf67E1wVGoyxCPNpQ-VP-GXP5ltSiSnladrByVZYU-RpyC4twYDQj1yssWTjBH~UxLGiTfyYLX2QTwtA__",
+    "ride_far": "https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__3/image-4ba22c96-405d-4df1-b962-0ab970f9a1db.png?Expires=2101776052&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=coFfj5LdAe6XZBjYBmtauHkv-mTB~KFHPKQ0Tbo7c4biRvzWdKJqxbE4ds7uWR3EX-BUvznUEAWeePr98rRoSstPvUxcUV5qRDYw0A7JJYktLvsprGuDQK7DGaR37HbbKYOhMRpv-H-NZ5ezatv6WZIRa0IGGnI9zpVZN1rKS0Xv90PjLl5mSwGSQfkIDMAFLFIKL3HorPf0xgx~UVDWvgNb1bEEBkWtJ35Gj3E1nC4jeTQZI-SHBboHKoEFH7RD3UW62zE-jj--Im87oIiB-oscLSPGgZbszNuAmoZWhYgOPhTRhJsWiA5u0KWRv4nWzLaWTU1A-0agKurSxukVDw__",
     "door_shut": "https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__6/image-81bfc602-a262-469a-bf06-a60b77fdf504.png?Expires=2101427424&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=Z9QE5zppVQCe7JeEJZNtChW0Z08NQaZ27uaOZTS-OAbOFgOk~U5a7UJPzG2Vd7wH~sezcLTai1Sht9pwzLC-ZGmQyvk2S1cXCrcrToSqNGuMqMBiVsHRbSl4WaDJENTYGC0gglBcl9kusMUuHszfbD2U2WtpaU4ftHa9Pb1Wnzu2sc7ZyQJIl4ErIFQdrmxbk2o85Ng4lzPft0oeEiXYZFHvtUIdslXIs2fTBx7ihYAz3bMC27LlP5FNmdNGb5pDNZMdopVvmPp9j02RpPXwEasUtLJbVk9IJa0N2KEE4c9yOQjD31sUpj7uutE9OPlEkocEsb2yNmAZUomJMUrFtw__",
     "door_ajar": "https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__10/image-9ac04ce4-e434-4ff4-8195-0344e08d0d28.png?Expires=2101425549&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=dgkOTj8y8oCXYLB5kOigjPO1CjXLpLtQjainBZ2biA~lixuJcCNY7akC39S9rei0gc0msR1CDbSAS2qRc9am045DGz3mUYeG6UBhZkGvqlH8Css9NulrRVZ2lAa~zDinQ~7hF-r9tXOJYOP4xw-wzrngG8~niG8VDGnWfQ0SEC-qnTsTHwpVBGC1lfrkfGDQB~B4y8AhxiB2VzbSFYLhxtWoTzExDcXlKxXx3bPM5GjzzYohhLkqq~WVfgQMo1pFFgumSPzItl02wE~E8jy~ExGrB0p8Rl5yK9wMVvJORAaWwhr16jyygCrhnQIsTidPnxGd0UphcKhiOvZrUjZKIg__",
     "door_open": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__6/image-ddf0b508-e15e-43b7-a39a-54fc46e42718.png?Expires=2101423604&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=Gbe~a9mXPZh8hUx6bW0yP3uyxFXeoOtNn06PhG7P-~Mpa4~gr7snwtm0hSwoAT3NXxniMq~mt2y--TeDwk3BnphL8wP1OPkaQ~5MewSa7Nl8N0V3iIr2F9HWgX8x7kgCdXiSAxVVNI~HGbDdrwJ8B2gcFudSxRameITLAhf4gS-~dN~G9rtHXWRtFH-aWY8n~JOGnYsSxOEMGPNkIqEKfxdci5mfOXW2QGVmvNYKzO3sOe5jFAqqK2fOgYFZG12fi6DMiNflBESQBuWe7K2VjkgrI5p5TEyCdcACI6aD3F~DqpGUETdj7x62qlmx6xpND53q~3LTX7AabhNkl7WWVQ__"
