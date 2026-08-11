@@ -101,7 +101,7 @@ button{cursor:pointer;font-family:'Oswald',sans-serif;text-transform:uppercase;l
 
 <script>
 /* ---- password gate (SHA-256 hash; the password itself is never in this file) ---- */
-const GATE_HASH='136c9e87453339b304bae8106461f51b18422c7eba06934b573c004289571327';
+const GATE_HASH='965db583a2686a36b21dafaaa05642b6291692c35232c77e0c6c9309075bf050';
 async function sha256(s){
   const b=await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
   return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');
