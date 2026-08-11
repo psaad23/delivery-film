@@ -80,7 +80,10 @@
       "Makeup Artist",
       "Sound Recordist / Boom Op",
       "UPM",
-      "Production Assistant"
+      "Production Assistant",
+      "Key Grip",
+      "Gaffer",
+      "1st AC"
     ],
     "fr": "On cherche : 1er assistant réal · direction artistique / costumes · maquillage · preneur de son / perchiste · dir. de production · assistant de production",
     "pitch": "We spend our careers enslaved to clients. This one's ours: a chance to be kids in a playground again. The kicker: it's pro-bono and self-financed, so the budget is laughable. Hell of a pitch, eh. What's actually on the table: a top-notch production and post crew, a designed festival short, full credit, finished material for your reel, plus two night shoots over Labor Day weekend (Sept 4–6), locked around everyone's availability.",
@@ -95,9 +98,7 @@
   "theme": {
     "accent": "#FFA733",
     "ink": "#03080C",
-    "cream": "#E4F1F3",
-    "cyan": "#7FE9E2",
-    "night": "#0C2833"
+    "cream": "#E4F1F3"
   },
   "media": {
     "ride_near": "https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-i-m-a-g-e-v1/media__4/image-6db401a4-815f-42b4-888f-f7c5171577ed.png?Expires=2101775893&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=aoCgW7auYZCEeUyuNnxaoCCWJ-ln6r0CFRZWWQAUh~9esLzToxe~9YiXyvr92RmLv1Mvpq~Dvx8-A0fNF~wVhdojScp2kVq9CLcVNjznJCHC8FJeJAVMdyZ9YU2uArc3ZoaW~S9rlcUktKCPcT75nUVwVE~LhR42nZqaR8XRLapPqM4GMD4i~Gpa2fLvr3rbowwhaldfIXPtSZfmsOx~R-afqqq-zSaW1hkRRH73tWoVRfq7sRqmwNpVpeqCAoIOK-eArGYktH8~VeuFuvBAJZssyFQvTREXq80Eur41vH9Qa6qn~s36hjYXekgpDlV3J7PerMym0XZMse7zLfA5wQ__",
